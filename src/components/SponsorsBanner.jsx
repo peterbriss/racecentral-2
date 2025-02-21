@@ -1,6 +1,6 @@
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image'
 import Link from 'next/link'
-import Router from "next/router"
+import Router from 'next/router'
 import Script from 'next/script'
 import { useEffect } from 'react'
 
@@ -12,31 +12,47 @@ import sponsor5 from '@/images/sponsors/dents-by-hand-logo-lrg-xtr-white.png'
 import sponsor6 from '@/images/sponsors/asian-cajun-front.png'
 import sponsor7 from '@/images/sponsors/asian-cajun-rear.png'
 import sponsor8 from '@/images/sponsors/euro-werkz.jpg'
+import sponsor9 from '@/images/sponsors/innovative-cold-therapy.png'
 
 export function SponsorsBanner({ className, children, ...props }) {
   useEffect(() => {
-    Router.events.on("routeChangeComplete", (path) => {
-      const script = document.createElement('script');
+    Router.events.on(
+      'routeChangeComplete',
+      (path) => {
+        const script = document.createElement('script')
 
-      script.src = '//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js';
-      script.async = true;
-      script.defer = true;
+        script.src =
+          '//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js'
+        script.async = true
+        script.defer = true
 
-      document.body.appendChild(script);
+        document.body.appendChild(script)
 
-      return () => document.body.removeChild(script);
-    }, [Router])});
+        return () => document.body.removeChild(script)
+      },
+      [Router]
+    )
+  })
 
   return (
     <>
-      <div className="bg-yellow-200 text-center">
-        Sponsored By
-      </div>
-      <div className="relative w-full" data-carousel="slide" id="default-carousel">
-        <div className="relative h-52 md:h-72 lg:h-96 w-full overflow-hidden">
-          <div className="hidden duration-700 ease-in-out bg-yellow-200" data-carousel-item>
+      <div className="bg-yellow-200 text-center">Sponsored By</div>
+      <div
+        className="relative w-full"
+        data-carousel="slide"
+        id="default-carousel"
+      >
+        <div className="relative h-52 w-full overflow-hidden md:h-72 lg:h-96">
+          <div
+            className="hidden bg-yellow-200 duration-700 ease-in-out"
+            data-carousel-item
+          >
             <div className="grid grid-cols-2 ">
-              <Link className="pb-2 px-2" target="_blank" href="https://coyotemotorsports.com/">
+              <Link
+                className="px-2 pb-2"
+                target="_blank"
+                href="https://coyotemotorsports.com/"
+              >
                 <Image
                   alt="Sponsored by Coyote Motorsports"
                   id="sponsor-2"
@@ -45,7 +61,11 @@ export function SponsorsBanner({ className, children, ...props }) {
                   src={sponsor2}
                 />
               </Link>
-              <Link className="pb-2 px-2" target="_blank" href="https://www.hobbytown.com/aurora-co/l45">
+              <Link
+                className="px-2 pb-2"
+                target="_blank"
+                href="https://www.hobbytown.com/aurora-co/l45"
+              >
                 <Image
                   alt="Sponsored by Colpar's Hobby Town"
                   id="sponsor-3"
@@ -56,15 +76,42 @@ export function SponsorsBanner({ className, children, ...props }) {
               </Link>
             </div>
           </div>
-          <div className="hidden duration-700 ease-in-out bg-yellow-200" data-carousel-item>
-            <div className="grid bg-yellow-200 pb-2 px-2">
-              <Link className="pb-2 px-2" target="_blank" href="https://www.eurowerkzmotorsport.com/">
+          <div
+            className="hidden bg-yellow-200 duration-700 ease-in-out"
+            data-carousel-item
+          >
+            <div className="grid bg-yellow-200 px-2 pb-2">
+              <Link
+                className="px-2 pb-2"
+                target="_blank"
+                href="https://www.eurowerkzmotorsport.com/"
+              >
                 <Image
                   alt="EuroWerkz Motorsport"
                   id="sponsor-8"
                   layout="responsive"
                   height="5000"
                   src={sponsor8}
+                />
+              </Link>
+            </div>
+          </div>
+          <div
+            className="hidden bg-yellow-200 duration-700 ease-in-out"
+            data-carousel-item
+          >
+            <div className="grid bg-yellow-200 px-2 pb-2">
+              <Link
+                className="px-2 pb-2"
+                target="_blank"
+                href="https://iceboxtherapy.com/westminster-co/"
+              >
+                <Image
+                  alt="Innovative Cold Therapy"
+                  id="sponsor-9"
+                  layout="responsive"
+                  height="600"
+                  src={sponsor9}
                 />
               </Link>
             </div>
@@ -80,7 +127,10 @@ export function SponsorsBanner({ className, children, ...props }) {
           `,
         }}
       />
-      <div className="ctct-inline-form" data-form-id="e86beda0-8f69-4d7d-acc3-517204cc3902"></div>
+      <div
+        className="ctct-inline-form"
+        data-form-id="e86beda0-8f69-4d7d-acc3-517204cc3902"
+      ></div>
     </>
   )
 }
