@@ -13,6 +13,7 @@ import sponsor6 from '@/images/sponsors/asian-cajun-front.png'
 import sponsor7 from '@/images/sponsors/asian-cajun-rear.png'
 import sponsor8 from '@/images/sponsors/euro-werkz.jpg'
 import sponsor9 from '@/images/sponsors/innovative-cold-therapy.png'
+import sponsor10 from '@/images/sponsors/revilitlized-health.jpg'
 
 export function SponsorsBanner({ className, children, ...props }) {
   useEffect(() => {
@@ -112,6 +113,26 @@ export function SponsorsBanner({ className, children, ...props }) {
                   layout="responsive"
                   height="600"
                   src={sponsor9}
+                />
+              </Link>
+            </div>
+          </div>
+          <div
+            className="hidden bg-yellow-200 duration-700 ease-in-out"
+            data-carousel-item
+          >
+            <div className="grid bg-yellow-200 px-2 pb-2">
+              <Link
+                className="px-2 pb-2"
+                target="_blank"
+                href="https://www.revitalized-health.com/"
+              >
+                <Image
+                  alt="Revilitlized Health"
+                  id="sponsor-10"
+                  layout="responsive"
+                  height="450"
+                  src={sponsor10}
                 />
               </Link>
             </div>

@@ -8,9 +8,7 @@ export default function TV({ episodes }) {
   return (
     <>
       <Head>
-        <title>
-          Kurt Hansen&apos;s Race Central Media TV
-        </title>
+        <title>Kurt Hansen&apos;s Race Central Media TV</title>
         <meta
           name="description"
           content="TV conversations with professional racers."
@@ -28,6 +26,13 @@ export default function TV({ episodes }) {
           />
         </div>
         <SponsorsBanner />
+        <div className="divide-y divide-slate-100 sm:mt-4 lg:mt-8 lg:border-t lg:border-slate-100">
+          <iframe
+            src="https://www.youtube.com/embed/mnlNGea_Q5s"
+            allowFullScreen
+            className="h-screen w-full"
+          />
+        </div>
       </div>
     </>
   )
