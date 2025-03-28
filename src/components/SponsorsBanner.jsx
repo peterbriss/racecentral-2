@@ -131,7 +131,7 @@ export function SponsorsBanner({ className, children, ...props }) {
                   alt="Revilitlized Health"
                   id="sponsor-10"
                   layout="responsive"
-                  height="450"
+                  height="300"
                   src={sponsor10}
                 />
               </Link>

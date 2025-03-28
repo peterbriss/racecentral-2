@@ -26,11 +26,11 @@ export default function TV({ episodes }) {
           />
         </div>
         <SponsorsBanner />
-        <div className="divide-y divide-slate-100 sm:mt-4 lg:mt-8 lg:border-t lg:border-slate-100">
+        <div className="flex justify-center divide-y divide-slate-100 sm:mt-4 lg:mt-8 lg:border-t lg:border-slate-100">
           <iframe
             src="https://www.youtube.com/embed/mnlNGea_Q5s"
             allowFullScreen
-            className="h-screen w-full"
+            className="h-[50vh] w-1/2 rounded-lg shadow-lg"
           />
         </div>
       </div>
